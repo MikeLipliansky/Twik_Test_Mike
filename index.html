@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ** link to css ** -->
+    <link rel="stylesheet" href="./main.css" />
+</head>
+
+<!-- ** body ** -->
+<body >   
+    <div class="main-container">
+        <!-- ** flowting bubble ** -->
+        <div class="bubble" onclick="openInfoModal()"></div>
+    
+        <!-- ** info panel ** -->
+        <div class="info-panel" id="example">
+            <!-- ** info panel close and refresh buttons ** -->
+            <div class="info-panel-btns">
+                <img src="./media/close.svg" onclick="closeInfoModal()" />
+                <img src="./media/refresh.svg" onclick="refreshPage()" />
+            </div>
+            <!-- ** info panel text ** -->
+            <div class="info-panel-text">
+                <h1>INFO</h1>
+                <div class="info-image-text">
+                    <p>Num of images:
+                    <p id="image-counter"></p>
+                    </p>
+                </div>
+                <div class="info-fixed-text">
+                    <p>Num of element with position fixed:
+                    <p id="fixed-counter"></p>
+                    </p>
+                </div>
+                <!-- ** open contact us panlel using contact us button ** -->
+                <button onclick="openContModal()">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- ** contact panel ** -->
+        <div class="cont-panel" id="example">
+            <!-- ** contant panel close and back buttons ** -->
+            <div class="cont-panel-btns">
+                <img src="./media/close.svg" onclick="closeContModal()" />
+                <img src="./media/back.svg" onclick="BackToInfoModal()" />
+            </div>
+            <!-- ** panel title ** -->
+            <div class="cont-title">
+                <h1> Contact Us </h1>
+            </div>
+
+            <!-- ** the form ** -->
+
+            <div class="cont-panel-text">
+                 <!-- ** error message -->
+                <div id="error-message"></div>
+                 <!-- ** form builder with the google sheets submission on submit when valid ** -->
+                <form name="google-sheet" id="myform" onsubmit="return validation(event)">
+                    <!-- ** email -->
+                    <div class="cont-text">
+                        <h3> Email </h3>
+                    </div>
+                    <div class="input_field">
+                        <input type="text" placeholder="example@twik.io" id="email" name="email" />
+                    </div>
+                    <!-- ** name -->
+                    <div class="cont-text">
+                        <h3> Name </h3>
+                    </div>
+                    <div class="input_field">
+                        <input type="text" placeholder="Enter your name" id="name" name="name" />
+                    </div>
+                    <!-- ** message using textarea -->
+                    <div class="cont-text">
+                        <h3> Message </h3>
+                    </div>
+                    <div class="input_field" name="message">
+                        <textarea id="message" name="message">
+                        </textarea>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value="Submit"  >
+                    </div>
+                </form> 
+
+            </div>
+        </div>
+        <!-- ** Submission panel ** -->
+        <div class="submission-panel" id="example">
+            <div class="submition-panel-btns">
+                <img src="./media/close.svg" onclick="closeSubmissionModal()" />
+                <!-- ** the thank you message ** -->
+            </div>
+            <div class="thanks">
+                <h1>Thank you!</h1>
+            </div>
+            <div class="sent">
+                <h3>Your submissen has been sent</h3>
+            </div>
+        </div>
+    </div>
+ <!-- ** link to js ** -->
+    <script src="index.js"></script>
+    <!-- ** jquery for google sheets ** -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

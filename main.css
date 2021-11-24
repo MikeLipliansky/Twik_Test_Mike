@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* font */
+body {
+  font-family: "Gill Sans", sans-serif;
+  position: relative;
+}
+
+.main-container {
+  height: 150vh;
+  position: relative;
+  overflow: auto;
+}
+
+/* bubble */
+.bubble {
+  position: fixed;
+  top: 75%;
+  right: 2%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007f65;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+
+  /* bubble animation */
+  -webkit-animation: rotate-bottom 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+  animation: rotate-bottom 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+@-webkit-keyframes rotate-bottom {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+  }
+}
+@keyframes rotate-bottom {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+  }
+}
+
+/* information panel */
+.info-panel {
+  border: 1px solid #007f65;
+  position: fixed;
+  width: 400px;
+  top: 65%;
+  right: 3%;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+  display: none;
+  padding: 10px 0;
+}
+
+/* information panel buttons */
+.info-panel-btns {
+  padding: 0px 10px;
+}
+img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 10px 5px;
+}
+
+/* information text in one line with the data */
+.info-panel-text {
+  padding: 0px 20px;
+}
+
+.info-image-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-fixed-text {
+  display: flex;
+  flex-direction: row;
+}
+
+/* contact us button in the information panel */
+button {
+  background-color: #086c58;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  display: block;
+  margin: 10px auto;
+}
+
+/* contact us panel */
+.cont-panel {
+  border: 1px solid #007f65;
+  position: fixed;
+  width: 400px;
+  top: 50%;
+  right: 3%;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+  display: none;
+  padding: 10px 0;
+}
+
+/* contact us panel buttons */
+.cont-panel-btns {
+  padding: 0px 10px;
+}
+img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 10px 5px;
+}
+
+/* contact us panel title */
+.cont-title {
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+/* contact us panel text */
+.cont-panel-text {
+  padding: 0px 20px;
+  margin-bottom: 10px;
+  margin-block-start: 10px;
+}
+
+/* contact us panel fields of text*/
+.input_field {
+  margin-bottom: 10px;
+  width: 100%;
+}
+input[type="text"] {
+  padding: 5px 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+/* contact us panel fields of textarea*/
+input[type="textarea"] {
+  padding: 5px 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+.cont-panel.input_field input[type="text"],
+.cont-panel textarea {
+  padding: 5px 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  width: 100%;
+  resize: none;
+}
+/* contact us panel submit button*/
+.btn input[type="submit"] {
+  background-color: #086c58;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  display: block;
+  margin: 10px auto;
+}
+/* contact us panel error message*/
+.cont-panel-text #error-message {
+  margin-bottom: 20px;
+  padding: 0px;
+  background: #dc555568;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  display: block;
+}
+
+/* submission panel */
+.submission-panel {
+  border: 1px solid #007f65;
+  position: fixed;
+  width: 400px;
+  top: 70%;
+  right: 3%;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+  display: none;
+  padding: 10px 0;
+}
+
+/* submission panel buttons */
+.submission-panel-btns {
+  padding: 0px 10px;
+}
+img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
+/* submission message */
+.thanks {
+  margin: 0 10px;
+  letter-spacing: 3px;
+  color: #007f65;
+}
+.sent {
+  margin: 0 10px;
+}
